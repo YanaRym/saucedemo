@@ -9,6 +9,8 @@ import org.tms.service.CartPageService;
 import org.tms.service.InventoryPageService;
 import org.tms.service.LoginPageService;
 
+import static org.tms.utilities.Constants.FIRST_ITEM_NAME;
+
 public class CartPageTest extends BaseTest {
 
     private LoginPageService loginPageService;
@@ -19,13 +21,13 @@ public class CartPageTest extends BaseTest {
     }
 
     @Test
-    public void addTShirtToCartTest() {
+    public void addItemToCartTest() {
         User user = new User("standard_user", "secret_sauce");
         InventoryPageService inventoryPageService = loginPageService.login(user);
         CartPageService cartPageService = new CartPageService();
         inventoryPageService.addProductToShoppingContainer();
         String actualItemName = cartPageService.getItemNameFromCart();
-        String expectedItemName = "Sauce Labs Bolt T-Shirt";
+        String expectedItemName = FIRST_ITEM_NAME;
         Assert.assertEquals(actualItemName, expectedItemName, "Wrong item was added to the cart.");
     }
 }

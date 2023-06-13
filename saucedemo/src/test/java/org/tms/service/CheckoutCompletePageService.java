@@ -6,7 +6,7 @@ public class CheckoutCompletePageService {
 
     CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage();
 
-    public boolean checkoutIsComplete() {
-        return checkoutCompletePage.backHomeButtonIsDisplayed();
+    public boolean isCheckoutComplete() {
+        return checkoutCompletePage.isBackHomeButtonDisplayed();
     }
 }

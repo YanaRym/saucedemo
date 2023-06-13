@@ -11,6 +11,6 @@ public class InventoryPageService {
     }
 
     public void addProductToShoppingContainer() {
-        inventoryPage.addTShirtToCart();
+        inventoryPage.addItemToCart();
     }
 }

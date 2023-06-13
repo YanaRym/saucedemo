@@ -8,7 +8,7 @@ public class CheckoutCompletePage extends BasePage {
     @FindBy(xpath = "//button[@id='back-to-products']")
     private WebElement backHomeButton;
 
-    public boolean backHomeButtonIsDisplayed() {
+    public boolean isBackHomeButtonDisplayed() {
         return waitVisibilityOf(backHomeButton).isDisplayed();
     }
 }

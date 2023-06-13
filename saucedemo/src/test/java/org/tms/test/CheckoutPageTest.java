@@ -27,7 +27,7 @@ public class CheckoutPageTest extends BaseTest {
         CheckoutOverviewPageService checkoutOverviewPageService = new CheckoutOverviewPageService();
         checkoutOverviewPageService.completeOrder();
         CheckoutCompletePageService checkoutCompletePageService = new CheckoutCompletePageService();
-        Boolean checkoutIsComplete = checkoutCompletePageService.checkoutIsComplete();
-        Assert.assertTrue(checkoutIsComplete, "Checkout failed.");
+        Boolean isCheckoutComplete = checkoutCompletePageService.isCheckoutComplete();
+        Assert.assertTrue(isCheckoutComplete, "Checkout failed.");
     }
 }
