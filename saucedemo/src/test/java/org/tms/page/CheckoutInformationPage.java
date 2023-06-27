@@ -1,8 +1,10 @@
 package org.tms.page;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+@Log4j2
 public class CheckoutInformationPage extends BasePage {
 
     @FindBy(xpath = "//input[@id='first-name']")
@@ -17,6 +19,7 @@ public class CheckoutInformationPage extends BasePage {
     private WebElement continueButton;
 
     public CheckoutInformationPage fillInFirstNameField(String firstName) {
+        log.info("Fill in user info");
         waitVisibilityOf(firstNameField).sendKeys(firstName);
         return this;
     }

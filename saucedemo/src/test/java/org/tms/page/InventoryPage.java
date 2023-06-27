@@ -1,10 +1,12 @@
 package org.tms.page;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static org.tms.utilities.Constants.FIRST_ITEM_INDEX;
 
+@Log4j2
 public class InventoryPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='title']")
@@ -21,6 +23,7 @@ public class InventoryPage extends BasePage {
     }
 
     public void addItemToCart() {
+        log.info("Add item to the cart");
         item.click();
         waitElementToBeClickable(shoppingCartContainer).click();
     }
